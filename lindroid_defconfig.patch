@@ -1,0 +1,22 @@
+*** surya_defconfig	2024-09-23 07:23:13.059567319 +0500
+--- surya_defconfig_lindroid	2024-09-23 00:32:01.504311044 +0500
+*************** CONFIG_NAMESPACES=y
+*** 32 ****
+! # CONFIG_PID_NS is not set
+--- 32 ----
+! CONFIG_PID_NS=y
+*************** CONFIG_FINGERPRINT_GF3208=y
+*** 344 ****
+! # CONFIG_VT is not set
+--- 344 ----
+! CONFIG_VT=y
+*************** CONFIG_CRYPTO_AES_ARM64_NEON_BLK=y
+*** 739 ****
+--- 740,745 ----
++ CONFIG_SYSVIPC=y
++ CONFIG_UTS_NS=y
++ CONFIG_IPC_NS=y
++ CONFIG_USER_NS=y
++ CONFIG_NET_NS=y
++ CONFIG_CGROUP_DEVICE=y
+\ No newline at end of file

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="vendor/lindroid" remote="github" name="Linux-on-droid/vendor_lindroid" revision="lindroid-21" />
+  <project path="vendor/extra" remote="github" name="Linux-on-droid/vendor_extra" revision="lindroid-21" />
+  <project path="external/libhybris" remote="github" name="Linux-on-droid/libhybris" revision="staging/lindroid-21" />
+  <project path="external/lxc" remote="github" name="Linux-on-droid/external_lxc" revision="lindroid-21" />
+</manifest>
+
