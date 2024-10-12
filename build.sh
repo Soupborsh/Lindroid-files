@@ -10,8 +10,8 @@ patch kernel/xiaomi/surya/arch/arm64/configs/surya_defconfig lindroid_defconfig.
 patch frameworks/native/services/inputflinger/reader/EventHub.cpp EventHub.patch
 rm lindroid_defconfig.patch
 rm EventHub.patch
-echo "" >> BoardConfig.mk
-echo "# Set SELinux to permissive" >> BoardConfig.mk
-echo "BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive" >> BoardConfig.mk
+echo "" >> device/xiaomi/surya/BoardConfig.mk
+echo "# Set SELinux to permissive" >> device/xiaomi/surya/BoardConfig.mk
+echo "BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive" >> device/xiaomi/surya/BoardConfig.mk
 croot
 brunch surya
