@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project name="TheMuppets/proprietary_vendor_xiaomi_surya" path="vendor/xiaomi/surya" remote="github" revision="lineage-21"/>
+</manifest>
