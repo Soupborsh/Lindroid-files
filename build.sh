@@ -10,8 +10,10 @@ patch kernel/xiaomi/surya/arch/arm64/configs/surya_defconfig lindroid_defconfig.
 patch frameworks/native/services/inputflinger/reader/EventHub.cpp EventHub.patch
 rm lindroid_defconfig.patch
 rm EventHub.patch
-echo "" >> device/xiaomi/surya/BoardConfig.mk
-echo "# Set SELinux to permissive" >> device/xiaomi/surya/BoardConfig.mk
-echo "BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive" >> device/xiaomi/surya/BoardConfig.mk
+echo '' >> device/xiaomi/surya/BoardConfig.mk
+echo '# Set SELinux to permissive' >> device/xiaomi/surya/BoardConfig.mk
+echo 'BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive' >> device/xiaomi/surya/BoardConfig.mk
+echo '$(call inherit-product, vendor/lindroid/lindroid.mk)' >> device/xiaomi/surya/lineage_surya.mk
+sed -i '/# CONFIG_SYSVIPC is not set/d' kernel/configs/r/android-4.14/android-base.config
 croot
 brunch surya
