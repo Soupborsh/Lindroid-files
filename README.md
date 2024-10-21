@@ -18,6 +18,7 @@ each build execute:
 
     cd Lineage21/
     crave run --no-patch -- 'curl https://raw.githubusercontent.com/Soupborsh/Lindroid-files/refs/heads/main/build.sh | bash'
+
 It should start building, you can leave from that devspace.
 
 ## Getting build output
@@ -28,12 +29,18 @@ You should be in your project folder, if not:
 
 	cd Lineage21/
 
-Get sha256sum of ROM zip.(optional, helps avoid corrupted files)
+Get sha256sum of ROM zip and the name.
 
 	crave ssh sha256sum out/target/product/surya/lineage-*.zip
+
+Example output:
+
+	d44b159a6588f309fc8193dd2759dce688a2039232051eaa08df0df0ff64be17  out/target/product/surya/lineage-21.0-20241021-UNOFFICIAL-surya.zip
+(Copy that name of your ROM zip and change it in commands, I provide mine as example)
+
 Then pull it from build server to devspace:
 
-    crave pull out/target/product/surya/lineage-*.zip
+    crave pull out/target/product/surya/lineage-21.0-20241021-UNOFFICIAL-surya.zip
 
 
 #### On local linux machine(your pc):
@@ -42,13 +49,13 @@ copy string after Host in .ssh/config that is about crave.
 For example it is `crave-devspace-foss_crave_io-my_email`
 Run this to pull that file to local pc(change `crave-devspace-foss_crave_io-my_email` to yours):
 
-    scp crave-devspace-foss_crave_io-my_email:/crave-devspaces/Lineage21/out/target/product/surya/lineage-*.zip .
+    scp crave-devspace-foss_crave_io-my_email:/crave-devspaces/Lineage21/out/target/product/surya/lineage-21.0-20241021-UNOFFICIAL-surya.zip .
 
 Check sha256sum of ROM zip:
 
-	sha256sum lineage-*.zip
+	sha256sum lineage-21.0-20241021-UNOFFICIAL-surya.zip
 
-If it is same, just flash it like regular LineageOS
+If it is same, just [install it like regular LineageOS](https://wiki.lineageos.org/devices/surya/install/)
 
 ## Thanks
 
