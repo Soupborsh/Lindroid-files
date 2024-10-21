@@ -42,7 +42,7 @@ copy string after Host in .ssh/config that is about crave.
 For example it is `crave-devspace-foss_crave_io-my_email`
 Run this to pull that file to local pc(change `crave-devspace-foss_crave_io-my_email` to yours):
 
-    scp crave-devspace-foss_crave_io-my_email:/crave-devspaces/Lineage21/out/target/product/surya/lineage*.zip .
+    scp crave-devspace-foss_crave_io-my_email:/crave-devspaces/Lineage21/out/target/product/surya/lineage-*.zip .
 
 Check sha256sum of ROM zip:
 
