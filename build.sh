@@ -73,6 +73,4 @@ sed -i '/# CONFIG_SYSVIPC is not set/d' kernel/configs/r/android-${KERNEL_VERSIO
 croot
 brunch $2
 
-rm ./build.sh
-
 exit 0
