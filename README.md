@@ -1,12 +1,12 @@
 # Lindroid-files
 
-Build script for LineageOS with Lindroid for POCO X3 NFC (xiaomi-surya). Also contains files needed for script.
+Build script for LineageOS with Lindroid for POCO X3 NFC (xiaomi-surya), other devices not supported yet. Also contains files needed for script.
 
 ## Status
 
-Builds, but Lindroid may not work.
+Builds, but Lindroid works with many bugs.
 
-## Building for surya
+## Building for surya(using crave.io)
 
 #### In devspace:
 
@@ -16,8 +16,10 @@ In crave devspaces clone LineageOS 21 sources just once:
 
 each build execute:
 
+(change "xiaomi" and "surya" to your vendor and model)
+
     cd Lineage21/
-    crave run --no-patch -- 'curl https://raw.githubusercontent.com/Soupborsh/Lindroid-files/refs/heads/main/build.sh | bash'
+    crave run --no-patch -- 'wget https://raw.githubusercontent.com/Soupborsh/Lindroid-files/refs/heads/main/build.sh && chmod +x ./build.sh && ./build.sh xiaomi surya'
 
 It should start building, you can leave from that devspace.
 
