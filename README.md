@@ -16,10 +16,10 @@ In crave devspaces clone LineageOS 21 sources just once:
 
 each build execute:
 
-(change "xiaomi" and "surya" to your vendor and model)
+(change "xiaomi", "surya" and "arm64" your vendor, codename and architecure)
 
     cd Lineage21/
-    crave run --no-patch -- 'wget https://raw.githubusercontent.com/Soupborsh/Lindroid-files/refs/heads/main/build.sh && chmod +x ./build.sh && ./build.sh xiaomi surya'
+    crave run --no-patch -- 'wget https://raw.githubusercontent.com/Soupborsh/Lindroid-files/refs/heads/main/build.sh && chmod +x ./build.sh && ./build.sh xiaomi surya arm64'
 
 It should start building, you can leave from that devspace.
 
