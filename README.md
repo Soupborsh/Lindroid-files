@@ -1,6 +1,6 @@
 # Lindroid-files
 
-Build script for LineageOS with Lindroid for POCO X3 NFC (xiaomi-surya), other devices not supported yet. Also contains files needed for script.
+Build script for LineageOS with Lindroid, tested only on POCO X3 NFC (xiaomi-surya). Also contains files needed for script.
 
 ## Status
 
