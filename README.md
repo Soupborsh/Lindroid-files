@@ -6,7 +6,7 @@ Build script for LineageOS with Lindroid, tested only on POCO X3 NFC (xiaomi-sur
 
 Builds, but Lindroid works with many bugs.
 
-## Building for surya(using crave.io)
+## Building(using crave.io)
 
 #### In devspace:
 
