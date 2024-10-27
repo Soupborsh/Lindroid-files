@@ -57,12 +57,6 @@ rm ae700d3d04a2cd8b34e1dae434b0fdc9cde535c7.patch
 rm 0001-Ignore-uevent-s-with-null-name-for-Extcon-WiredAcces.patch
 rm 10f98759162a0034a2afa62c5977f9bcf921db13.patch
 
-# Set SELinux to permissive
-echo '' >> device/$1/$2/BoardConfig.mk
-echo '# Set SELinux to permissive' >> device/$1/$2/BoardConfig.mk
-echo 'BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive' >> device/$1/$2/BoardConfig.mk
-echo '$(call inherit-product, vendor/lindroid/lindroid.mk)' >> device/$1/$2/lineage_$2.mk
-
 # Fix building by removing CONFIG_SYSVIPC from android-base.config
 KERNEL_VERSION=$(grep -E '^VERSION' kernel/$1/$2/Makefile | cut -d' ' -f3)
 PATCHLEVEL=$(grep -E '^PATCHLEVEL' kernel/$1/$2/Makefile | cut -d' ' -f3)
