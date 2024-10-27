@@ -67,7 +67,7 @@ echo '$(call inherit-product, vendor/lindroid/lindroid.mk)' >> device/$1/$2/line
 KERNEL_VERSION=$(grep -E '^VERSION' kernel/$1/$2/Makefile | cut -d' ' -f3)
 PATCHLEVEL=$(grep -E '^PATCHLEVEL' kernel/$1/$2/Makefile | cut -d' ' -f3)
 
-sed -i '/# CONFIG_SYSVIPC is not set/d' kernel/configs/r/android-${KERNEL_VERSION}.${PATCHLEVEL}/android-base.config
+sed -i '/# CONFIG_SYSVIPC is not set/d' kernel/configs/*/android-${KERNEL_VERSION}.${PATCHLEVEL}/android-base.config
 
 # Build
 croot
