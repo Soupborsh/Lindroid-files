@@ -27,17 +27,21 @@ breakfast $2
 ## Linux kernel defconfig
 sed -i '/CONFIG_SYSVIPC/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
 sed -i '/CONFIG_UTS_NS/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
+sed -i '/CONFIG_PID_NS/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
 sed -i '/CONFIG_IPC_NS/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
 sed -i '/CONFIG_USER_NS/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
 sed -i '/CONFIG_NET_NS/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
 sed -i '/CONFIG_CGROUP_DEVICE/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
+sed -i '/CONFIG_GROUP_FREEZER/d' kernel/$1/$2/arch/$3/configs/$2_defconfig
 
 echo 'CONFIG_SYSVIPC=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
 echo 'CONFIG_UTS_NS=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
+echo 'CONFIG_PID_NS=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
 echo 'CONFIG_IPC_NS=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
 echo 'CONFIG_USER_NS=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
 echo 'CONFIG_NET_NS=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
 echo 'CONFIG_CGROUP_DEVICE=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
+echo 'CONFIG_GROUP_FREEZER=y' >> kernel/$1/$2/arch/$3/configs/$2_defconfig
 
 ## Download patches
 wget https://raw.githubusercontent.com/Soupborsh/Lindroid-files/refs/heads/main/patches/general/EventHub.patch
